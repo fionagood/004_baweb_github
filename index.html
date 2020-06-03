@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>002-baweb</title>
+    <script>
+        /*this adds the javascript file after page has finished loading */
+        let scriptElement=document.createElement('script');
+        scriptElement.type = 'text/javascript';
+        scriptElement.src = "script.js";
+        document.head.appendChild(scriptElement);
+    </script>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+<iframe class="iframeclass" src="index2.html"></iframe>
+</body>
+<style>
+    .iframeclass {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    box-sizing: border-box;
+}
+body {
+     margin: 0;
+     padding: 0;
+}
+</style>
+</html>
