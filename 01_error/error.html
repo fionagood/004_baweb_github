@@ -24,12 +24,75 @@
             font-size: 12px;
             color: red;
         }
+
+        #dialogoverlay{
+            display: none;
+            opacity: .8;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background: #FFF;
+            width: 100%;
+            z-index: 10;
+        }
+        #dialogbox{
+            display: none;
+            position: fixed;
+            background: #000;
+            border-radius:7px;
+            width:550px;
+            z-index: 10;
+        }
+        #dialogbox { background:#FFF; margin:8px; }
+        #dialogbox, #dialogboxhead{ background: #666; font-size:19px; padding:10px; color:#CCC; }
+        #dialogbox, #dialogboxbody{ background:#333; padding:20px; color:#FFF; }
+        #dialogbox , #dialogboxok{ background: #666; padding:10px; text-align:right; display: inline-block;}
+        #dialogbox , #dialogboxback{ background: #666; padding:10px; text-align:left;display: inline-block;} <!--www.w3schools.com/css/css3_buttons.asp-->
+
     </style>
 
 </head>
 
-<body>
+<body onload="Alert.render('bewege die maus blablabla')">
+<div id="dialogoverlay"></div> <!-- This disables and provides white overlay until user interacts with the dialog window -->
+<div id="dialogbox">
+    <div>
+        <div id="dialogboxhead"></div>
+        <div id="dialogboxbody"></div>
+        <div id="dialogboxback"></div>
+        <div id="dialogboxok"></div>
 
+    </div>
+</div>
+
+
+ <script>
+     function CustomAlert(){ /* The code below will start the custom box
+2 methods - render, ok */
+         this.render = function(dialog){
+             var winW = window.innerWidth;
+             var winH = window.innerHeight;
+             var dialogoverlay = document.getElementById('dialogoverlay');
+             var dialogbox = document.getElementById('dialogbox');
+             dialogoverlay.style.display = "block";
+             dialogoverlay.style.height = winH+"px";
+             dialogbox.style.left = (winW/2) - (550 * .5)+"px"; /* 550 = width of dialog box */
+             dialogbox.style.top = "100px";
+             dialogbox.style.display = "block";
+             document.getElementById('dialogboxhead').innerHTML = "Warnung";
+             document.getElementById('dialogboxbody').innerHTML = dialog;
+             document.getElementById('dialogboxok').innerHTML = '<button onclick="Alert.ok()">OK</button>';
+             document.getElementById('dialogboxback').innerHTML = '<button onclick="Alert.ok()">BACK</button>';
+         }
+         this.ok = function(){
+             document.getElementById('dialogbox').style.display = "none";
+             document.getElementById('dialogoverlay').style.display = "none";
+         }
+     }
+     var Alert = new CustomAlert();
+ </script>
 </body>
+
+
 
 </html>

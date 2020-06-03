@@ -18,6 +18,8 @@ let l2 = 0.1; // decay level  0.0 to 1.0
 let env;
 let triOsc;
 
+
+
 function setup() {
     img = loadImage('assets/error.svg');
 
@@ -59,7 +61,7 @@ function draw() {
 
     // Linie
     text(int(frameCount / 10 + mouseX / 10) % 20, width / 2, 100)
-    rect(mouseY, 0, 10, height)
+    rect(mouseY*2, 0, 10, height)
 }
 
 
