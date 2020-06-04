@@ -17,11 +17,17 @@
 
 <body>
 
-<button onclick="myFunction()">Try it</button>
-
+<button onclick="myFunction()">error beheben</button>
 <script>
     function myFunction() {
-        confirm("Press a button!");
+        var txt;
+        var r = confirm("error muss behoben werden.");
+        if (r == true) {
+            location.replace("error.html");
+        } else {
+            document.body.style.backgroundColor = "#00f";
+        }
+        document.getElementById("demo").innerHTML = txt;
     }
 </script>
 
@@ -37,9 +43,7 @@
 </div>
 
 
-
 </body>
-
 
 
 </html>

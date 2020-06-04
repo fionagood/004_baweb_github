@@ -1,4 +1,4 @@
-// Gamefication. Es soll nach ein paar Sekunden ein Pop-up erscheinen in dem aufgefordert wird die Linie 10x nach links und rechts ans Browserfenster anschlagen
+// Gamefication. Nach 2 sek ein Pop-up erscheinen in dem aufgefordert wird die Linie 10x nach links und rechts ans Browserfenster anschlagen
 // Dann erscheint ein weiteres Pop-up, welches den Fehler behoben erklährt und man wieder zurück zum Anfang der Error-Seite kann oder zur nächsten (Timer)
 
 
@@ -17,8 +17,6 @@ let l2 = 0.1; // decay level  0.0 to 1.0
 
 let env;
 let triOsc;
-
-
 
 function setup() {
     img = loadImage('assets/error.svg');
@@ -43,7 +41,7 @@ function setup() {
     reverb.process(triOsc, 3, 2);
 }
 
-    // Linie
+// Linie
 function draw() {
     textFont(myFont);
     image(img, 0, windowHeight / 2, windowWidth, 100);
@@ -61,7 +59,7 @@ function draw() {
 
     // Linie
     text(int(frameCount / 10 + mouseX / 10) % 20, width / 2, 100)
-    rect(mouseY*2, 0, 10, height)
+    rect(mouseY * 2, 0, 10, height)
 }
 
 

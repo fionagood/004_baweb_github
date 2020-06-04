@@ -1,5 +1,5 @@
 // scrollbalken müssen weg
-// popup  nach 2 sekunden einblenden lassen
+// popup nach 2 sekunden einblenden lassen «error muss behoben werden» /«ok» «nein danke» und verlinken zu error-seite
 
 let img;
 
@@ -17,7 +17,7 @@ function setup() {
 function draw() {
     image(img, 0, windowHeight / 2, windowWidth, 100);
     noStroke();
-    fill(255, 255, 255, 50);
+    fill(255, 255, 255, 70);
     rect(mouseX, mouseY, 1, height);
 
 

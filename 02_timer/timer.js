@@ -1,5 +1,5 @@
-// Hier muss einen Timer rein
-// + Icon für PDF download
+// Hier muss einen Timer rein, der auf alle anderen Seiten adaptiert werden kann
+// bei 0 sek kommt wieder ein popup, welches einen auf eine seite verweist, wo ein countdown von 12h läuft
 
 function setup() {
     // animation an position 0 setzen unter den HTML text

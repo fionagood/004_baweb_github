@@ -38,10 +38,16 @@ p {
     color: red;
 }
 
+
 h1 {
     font-family: 'Orbitron', sans-serif;
     font-size: 150px;
     color: red;
+    hyphens: auto;
+}
+
+audio {
+    display: none;
 }
 
 #container {

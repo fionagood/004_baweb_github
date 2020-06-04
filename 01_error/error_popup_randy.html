@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>error</title>
+
+    <script src="../lib/p5.min.js"></script>
+    <script src="../lib/p5.js"></script>
+    <script src="../lib/p5.sound.min.js"></script>
+    <script src="assets/error.svg"></script>
+    <link href="../style.css" rel="stylesheet">
+    <script src="error.js"></script>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 12px;
+            color: red;
+        }
+
+        #dialogoverlay {
+            display: none;
+            opacity: .8;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background: #FFF;
+            width: 100%;
+            z-index: 10;
+        }
+
+        #dialogbox {
+            display: none;
+            position: fixed;
+            background: #000;
+            border-radius: 7px;
+            width: 550px;
+            z-index: 10;
+        }
+
+        #dialogbox {
+            background: #FFF;
+            margin: 8px;
+        }
+
+        #dialogbox, #dialogboxhead {
+            background: #666;
+            font-size: 19px;
+            padding: 10px;
+            color: #CCC;
+        }
+
+        #dialogbox, #dialogboxbody {
+            background: #333;
+            padding: 20px;
+            color: #FFF;
+        }
+
+        #dialogbox, #dialogboxok {
+            background: #666;
+            padding: 10px;
+            text-align: right;
+            display: inline-block;
+        }
+
+        #dialogbox, #dialogboxback {
+            background: #666;
+            padding: 10px;
+            text-align: left;
+            display: inline-block;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+<div id="container">
+    <div id="bottom-right">
+        <a href="../02_timer/timer.html"><img src="../icons/pfeil_weiss.png" alt="Bild"/>
+    </div>
+
+    <div id="top-right">
+        <a href="assets/compaq_portable.PDF"><img src="../icons/plus_weiss.png" alt="Bild"/></a>
+    </div>
+</div>
+
+
+<body onload="Alert.render('Bitte navigieren sie mit ihrem Cursor die weisse Linie 10 x im Browserfenster hin und her.')">
+<div id="dialogoverlay"></div>
+<!-- This disables and provides white overlay until user interacts with the dialog window -->
+<div id="dialogbox">
+    <div>
+        <div id="dialogboxhead"></div>
+        <div id="dialogboxbody"></div>
+        <div id="dialogboxback"></div>
+        <div id="dialogboxok"></div>
+
+    </div>
+</div>
+
+
+<script>
+    function CustomAlert() { /* The code below will start the custom box
+2 methods - render, ok */
+        this.render = function (dialog) {
+            var winW = window.innerWidth;
+            var winH = window.innerHeight;
+            var dialogoverlay = document.getElementById('dialogoverlay');
+            var dialogbox = document.getElementById('dialogbox');
+            dialogoverlay.style.display = "block";
+            dialogoverlay.style.height = winH + "px";
+            dialogbox.style.left = (winW / 2) - (550 * .5) + "px"; /* 550 = width of dialog box */
+            dialogbox.style.top = "100px";
+            dialogbox.style.display = "block";
+            document.getElementById('dialogboxhead').innerHTML = "Error beheben";
+            document.getElementById('dialogboxbody').innerHTML = dialog;
+            document.getElementById('dialogboxok').innerHTML = '<button onclick="Alert.ok()">error beheben</button>';
+            document.getElementById('dialogboxback').innerHTML = '<button onclick="Alert.ok()">nein danke!</button>';
+        }
+        this.ok = function () {
+            document.getElementById('dialogbox').style.display = "none";
+            document.getElementById('dialogoverlay').style.display = "none";
+        }
+    }
+
+    var Alert = new CustomAlert();
+
+
+</script>
+
+</body>
+
+
+</html>
