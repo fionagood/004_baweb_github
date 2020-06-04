@@ -3,7 +3,7 @@ FullScreenButton {
     top: 50px;
     left: 5px;
     width: auto;
-    height:auto;
+    height: auto;
     line-height: 20pt;
     padding: 5px 15px 5px 15px;
     background: #0000ff;
@@ -35,6 +35,12 @@ li a {
 p {
     font-family: 'Orbitron', sans-serif;
     font-size: 15px;
+    color: red;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 150px;
     color: red;
 }
 
