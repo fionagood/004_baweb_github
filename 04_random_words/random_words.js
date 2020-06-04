@@ -1,7 +1,5 @@
 // Hier stimmen zum Teil Wort und Gesprochenes nicht übereinandet, Fehler beheben
 // Next-Pfeil einbauen, Verlinkung auf die nächste Seite (Suchmaschine)
-// Aktuelles Bild downloaden - Icon / button
-// + Icon für PDF download
 
 var lexicon;
 var voice;

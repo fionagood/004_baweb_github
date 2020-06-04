@@ -13,7 +13,7 @@ let img;
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    img = loadImage('assets/google.jpg');
+    img = loadImage('assets/google_blau.png');
     background(0, 0, 255);
 }
 

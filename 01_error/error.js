@@ -1,6 +1,6 @@
-// Hier fehlt die Gamefication. Es soll nach ein paar Sekunden ein Pop-up erscheinen in dem aufgefordert wird die Linie 10x nach links und rechts ans Browserfenster anschlagen
+// Gamefication. Es soll nach ein paar Sekunden ein Pop-up erscheinen in dem aufgefordert wird die Linie 10x nach links und rechts ans Browserfenster anschlagen
 // Dann erscheint ein weiteres Pop-up, welches den Fehler behoben erklährt und man wieder zurück zum Anfang der Error-Seite kann oder zur nächsten (Timer)
-// + Icon für PDF download
+
 
 let img;
 let myFont;
