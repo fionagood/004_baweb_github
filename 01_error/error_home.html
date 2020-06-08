@@ -17,10 +17,11 @@
 <body onload="myFunction()">
 
 <button onclick="myFunction()">error beheben</button>
+
 <script>
     function myFunction() {
         var txt;
-        var r = confirm("error muss behoben werden.");
+        var r = confirm("Möchten Sie den aufgetretenen Fehler beheben? Dann drücken Sie «Ok». Möchten sie verweilen, drücken Sie «Abbrechen».");
         if (r == true) {
             location.replace("error.html");
         } else {
