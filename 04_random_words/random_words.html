@@ -19,8 +19,21 @@
 
 </head>
 
+<body onload="myFunction()">
 
-<body>
+<script>
+    function myFunction() {
+        var txt;
+        var r = confirm("Klicken Sie nachher auf die blaue Fläche? Wenn ja drücken Sie «Ok», falls nicht «Abbrechen».");
+        if (r == true) {
+            document.body.style.backgroundColor = "#0000ff";
+        } else {
+            location.replace("../00_warnung/warnung.html");
+        }
+        document.getElementById("demo").innerHTML = txt;
+    }
+</script>
+
 
 <div id="container">
     <div id="bottom-right">

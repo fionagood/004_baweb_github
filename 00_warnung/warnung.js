@@ -1,10 +1,15 @@
 // Hintergrund und scrollbalken anpassen
 // ok button auf ellipse, weiterleiten auf error_home
 
+let myFont;
 var xDelta = 60;
 var yDelta = 70;
 var xRichtung = 1;
 var yRichtung = 1;
+
+function preload() {
+    myFont = loadFont('../orbitron/orbitron-medium.otf');
+}
 
 function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
@@ -14,6 +19,7 @@ function setup() {
 
 function draw() {
     background('lightgrey');
+
 
     if (xDelta > windowWidth) {
         xRichtung = -1;
@@ -36,14 +42,16 @@ function draw() {
     ellipse(xDelta, mouseX, 200, 200);
     textSize(32);
     fill('red');
-    text('OK', xDelta, mouseX);
+    textFont(myFont);
+    text('Weiter', xDelta, mouseX);
 
     // circle 2
     fill('red'), noStroke();
     ellipse(mouseY, yDelta, 200, 200);
     textSize(32);
     fill('white');
-    text('OK', mouseY, yDelta);
+    text('Verstanden', mouseY, yDelta);
+
 }
 
 function mouseClicked() {
@@ -52,6 +60,8 @@ function mouseClicked() {
 
     var cirlce2x = mouseY;
     var circle2y = yDelta;
+
+
 
     if (mouseX > circle1x - 100 && mouseX < circle1x + 100 && mouseY > circle1y - 100 && mouseY < circle1y + 100) {
         // alert("OK1");

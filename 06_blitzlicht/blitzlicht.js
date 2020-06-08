@@ -3,6 +3,7 @@
 let capture;
 var i = 0
 let ele;
+let zeichnen;
 
 
 // Update the count down every 1 second
@@ -39,14 +40,13 @@ function setup() {
 }
 
 function draw() {
-
   background(255);
   image(capture, 0, 0, windowWidth, windowHeight);
   filter(GRAY);
 
   i = i + 1
   // jedes 10. Mal ist die Bedingung erfüllt, blinkt
-  if (i % 5 === 0) {
+  if (i % 4 === 0) {
     background(255);
   } else {
     // alle anderen Zeiten, mit 0 auffüllen
@@ -56,4 +56,9 @@ function draw() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+}
+
+function zeichnen() {
+
+
 }

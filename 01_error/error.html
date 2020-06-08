@@ -19,26 +19,19 @@
             margin: 0;
         }
 
-        p {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 12px;
-            color: red;
-        }
 
     </style>
 
 </head>
 
-<body>
-
-<button onclick="myFunction()">error beheben</button>
+<body onload="myFunction()">
 
 <script>
      function myFunction() {
         var txt;
         var r = confirm("Um den Fehler zu beheben, navigieren sie mit der weissen Linie 10 x von links nach rechts im Browserfenster.");
         if (r == true) {
-            location.replace("error.html");
+            document.body.style.backgroundColor = "#FF0000";
         } else {
             location.replace("../00_warnung/warnung.html");
         }
@@ -52,12 +45,11 @@
     </div>
 
     <div id="top-right">
-        <a href="assets/compaq_portable.PDF"><img src="../icons/plus_weiss.png" alt="Bild"/></a>
+        <a href="assets/Anwendungen_Nutzung_2019.pdf"><img src="../icons/plus_weiss.png" alt="Bild"/></a>
     </div>
 
 </div>
 
-</script>
 
 </body>
 
